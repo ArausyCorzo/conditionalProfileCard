@@ -33,9 +33,9 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
+          <h1>${variables.name}</h1>
+          <h2>${variables.role}</h2>
+          <h3>${variables.city}</h3>
           <ul class="position-right">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
@@ -54,9 +54,11 @@ window.onload = function() {
     // if includeCover is true the algorithm should
     includeCover: true,
     // this is the url of the image that will used as background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITEhJSkrLi46Fx8zODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAABAgMAB//EABgQAQEBAQEAAAAAAAAAAAAAAAABERIC/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOQCzYDMLAzYI4AYODIMgBjYbBwC4OGkHALjYfB5AmNinLcgnjcqcjyCXLYryHIJ4GK4GAngYrgYCWNimBYCeBimBgJth8CwCAbGoFA2AAMLAwsINgtDSAEg4MhpACQZBkNIBZDSGkGeQLhp5NPJp5BPk3J+R5BPkZ5UnkeQT5blXluQS5DlbkOQS5DlbkL5BHkL5W5LyCWBit8hfII4FithbASsDFLAwE7C2KWFsAmAfAwCgYAEZBGQGkNI0hpAaQZBkNIASHkGQ0gBIaeTSGkAs8mnk0hp5Ak8mnk88jyCfI8q8tyCfLcq8tyCXIcrctyCPIcrchyCN8lsXvkt8ghfIWLXyW+QRvkti1hLARsLYtYSwErAsUsLYCdhbFLC2AQMNQATRoaA0h5Ah4DSHkaQ0gDIaRpDyA0h5GkPIASGkGQ8gFkNPJpDSATkcPyOATluVMbAT5bFMbkErAxXAwEb5LYtYWwEbC2K2FsBGwti1hLARsJYtYSwErCWK2EoJ0lilhbAToHpQNDQsPANDQsPANDwsU8gPmHkCHgDIpIWHgDIeQIeQGkNI0hoASGkGQYBcHDYwExsPgYBMCw+BQTsLYpS2AlYWxSloJWEsVpPQJeoSxSkoJ2EqlJQTpKpSUE6BqUDQ0LDQDw8JD+QPDwkPAP5U8kh4B4eEikA0PCQ8A0NCw0A0GBBgCICDWAIAUKaloFsLTUtAlLTUtAlJ6PSUE6SnpKCfolUqdAlJT0lAtLTUoNDwkNAPDxOHgKRTylKeArDxKVSUFIeJynlBSU8qUp5QUlNKnKeUDyjqem0DtpdbQNoWhaGgbS2haGg1pa1pbQC0tG0loBSUbSWgHpO01pLQLSU1pLQLSU1JQLS01KDQ0pIMBSHicppQVlPKjKeUFpTSpSnlBWU8qMp5QWlNKjKeegVlNKlKM9AtPQypdDPQKaOpdD0CmhqfTdAfQ0nQX0BrS2lvoLQG0loX0W+gG0lrWktBrSWtaS0GtJaNpLQC0to2ktBqUbSgwykhoB5TSpymlBSU0qcppQVlNKlKaUFpTSoz0aegWno09IymnoFp6NKjPQ9At0PSPQ9At03SPQ9Ar0HSfQdAr0W+idB0B7S30S+gvoDX0W0tpb6A1pbS2ltAbS2haW0GtLa1pbQa0trWltBrQa0AASiBpTaQZQPKaVOUZQVlGVOUdBWU0qUo6C0oz0jKaegWnoekZ6HoFp6HpHpugW6bpLpugV6bpLpugU6DpPoOgUvoOidF6A99BaS0NA1pbQtLaBrS2l0NAbQ0LQtBtDQtABBgBmBgMwMBtHS62geUdJoygpo6no6CmjqetoKz03SejoKdD0lrdAr03SfTdAp03SfTaCnQdJ62gfQ0mhoH0NLoaBtDS6GgbQ0A0B0A1gYGABYGBmZgYWYGgswMLMDCzAMZmARZgZmYBoCwMzMAMzAFBmBgZgagzAwMwAzMDAzAwVmB//Z",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Evelynn_0.jpg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
